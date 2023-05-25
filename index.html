@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tienda en línea</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .navbar-item {
+      margin-right: 10px;
+    }
+
+    .comments {
+      margin-top: 20px;
+    }
+
+    .comment-input {
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+    }
+
+    .reactions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .reaction {
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .cart {
+      margin-top: 20px;
+    }
+
+    .cart-item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-item">Comentarios</div>
+    <div class="navbar-item">Venta</div>
+    <div class="navbar-item">Carrito</div>
+  </div>
+
+  <div class="comments">
+    <h2>Comentarios</h2>
+    <div class="comment-input">
+      <input type="text" placeholder="Escribe un comentario">
+      <button onclick="postComment()">Publicar</button>
+    </div>
+    <div class="comment">
+      <p>¡Me encanta esta tienda!</p>
+      <div class="reactions">
+        <span class="reaction" onclick="likeComment()">👍</span>
+        <span class="reaction" onclick="dislikeComment()">👎</span>
+        <span class="reaction" onclick="reactComment('😊')">😊</span>
+        <span class="reaction" onclick="reactComment('😡')">😡</span>
+      </div>
+    </div>
+    <div class="comment">
+      <p>Los productos son de excelente calidad.</p>
+      <div class="reactions">
+        <span class="reaction" onclick="likeComment()">👍</span>
+        <span class="reaction" onclick="dislikeComment()">👎</span>
+        <span class="reaction" onclick="reactComment('😊')">😊</span>
+        <span class="reaction" onclick="reactComment('😡')">😡</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart">
+    <h2>Carrito</h2>
+    <div class="cart-item">
+      <p>Bananas - $100</p>
+      <button onclick="buyItem('Bananas')">Comprar</button>
+    </div>
+    <div class="cart-item">
+      <p>Nuka Cherry - $10</p>
+      <button onclick="buyItem('Nuka Cherry')">Comprar</button>
+    </div>
+    <div class="cart-item">
+      <p>Nuka Cola - $5</p>
+      <button onclick="buyItem('Nuka Cola')">Comprar</button>
+    </div>
+    <div class="cart-item">
+      <p>Pepsi Cola - $20</p>
+      <button onclick="buyItem('Pepsi Cola
